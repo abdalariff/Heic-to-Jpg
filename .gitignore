@@ -11,10 +11,10 @@ build/
 .vite/
 
 # Temp processing files
-backend/temp/uploads/*
-backend/temp/converted/*
-!backend/temp/uploads/.gitkeep
-!backend/temp/converted/.gitkeep
+temp/uploads/*
+temp/converted/*
+!temp/uploads/.gitkeep
+!temp/converted/.gitkeep
 
 # OS
 .DS_Store
