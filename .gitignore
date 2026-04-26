@@ -1,0 +1,27 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+
+# Build
+dist/
+build/
+.vite/
+
+# Temp processing files
+backend/temp/uploads/*
+backend/temp/converted/*
+!backend/temp/uploads/.gitkeep
+!backend/temp/converted/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

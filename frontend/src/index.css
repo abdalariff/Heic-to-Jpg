@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #FAFBFC;
+    --bg-secondary: #FFFFFF;
+    --bg-tertiary: #F3F4F6;
+    --text-primary: #111827;
+    --text-secondary: #6B7280;
+    --border: #E5E7EB;
+    --accent: #6366F1;
+  }
+
+  .dark {
+    --bg-primary: #0F1117;
+    --bg-secondary: #1A1D27;
+    --bg-tertiary: #252830;
+    --text-primary: #F9FAFB;
+    --text-secondary: #9CA3AF;
+    --border: #374151;
+    --accent: #818CF8;
+  }
+
+  body {
+    @apply bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-300;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-[var(--bg-secondary)] border border-[var(--border)] rounded-xl shadow-sm;
+  }
+
+  .btn-primary {
+    @apply bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-accent-hover transition-all transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .upload-zone {
+    @apply border-2 border-dashed border-[var(--border)] rounded-2xl min-h-[240px] flex flex-col items-center justify-center transition-all cursor-pointer hover:border-accent hover:bg-[var(--bg-tertiary)];
+  }
+
+  .progress-bar {
+    @apply h-1.5 w-full bg-[var(--bg-tertiary)] rounded-full overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-full bg-gradient-to-r from-accent to-[#10B981] transition-all duration-300;
+  }
+}
